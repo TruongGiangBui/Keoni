@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/keoni/static/css/main.4de94fea.css",
+    "main.js": "/keoni/static/js/main.2aa7dac0.js",
+    "static/media/BeVietnamPro-Bold.ttf": "/keoni/static/media/BeVietnamPro-Bold.b25893558c7f1ad49e5e.ttf",
+    "index.html": "/keoni/index.html",
+    "main.4de94fea.css.map": "/keoni/static/css/main.4de94fea.css.map",
+    "main.2aa7dac0.js.map": "/keoni/static/js/main.2aa7dac0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4de94fea.css",
+    "static/js/main.2aa7dac0.js"
+  ]
+}
