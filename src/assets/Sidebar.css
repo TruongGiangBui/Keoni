@@ -1,0 +1,129 @@
+.sidebar {
+  padding: 15px;
+  background-color: white;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu-list {
+  border: none;
+  padding-top: 30px;
+  font-size: 1.1rem;
+}
+
+.sidebar-menu-list>a {
+  text-decoration: none;
+}
+
+.sidebar-menu-item {
+  border-radius: 10px;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #434343;
+  font-weight: 600;
+}
+
+
+.sidebar-menu-item-active {
+  background-color: #F1ECFE;
+  color: #853FE7 !important;
+}
+
+
+.sidebar-menu-item:hover {
+  background-color: #f0f2f2;
+}
+
+.menu-icon {
+  margin-right: 20px;
+  width: 30px;
+  background-size: contain;
+}
+
+.sidebar-menu-list-bottom {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  left: 15px;
+  right: 15px;
+}
+
+.sidebar-menu-item-bottom {
+  border-radius: 10px;
+  height: 80px !important;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #434343;
+  font-weight: 600;
+}
+
+.sidebar-menu-item-bottom:hover {
+  background-color: #f0f2f2;
+}
+
+.sidebar-menu-list-bottom>a {
+  text-decoration: none;
+}
+
+.sidebar-menu-item-bottom-small-text {
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.sidebar-avt-box {
+  width: 30px;
+  height: 30px;
+  background: #EA7A35;
+  border-radius: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.sidebar-avt {
+  color: white;
+  font-size: 1.2rem;
+  /* font-family: "Be Vietnam Pro"; */
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.08;
+  word-wrap: break-word;
+}
+.sidebar-user-infor {
+  border-radius: 30px;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #434343;
+  font-weight: 600;
+  background-color: #F9FAFC;
+  justify-content: space-between;
+}
+.sidebar-user-infor:hover {
+  background-color: #f0f2f2;
+}
+.sidebar-user-infor-arrow{
+  font-size: 1.3rem;
+  float: right;
+}
