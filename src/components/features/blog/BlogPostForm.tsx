@@ -9,7 +9,7 @@ const BlogPostForm: React.FC = () => {
     { title: "Outline" },
     { title: "Blog Post" },
   ];
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(1);
 
 
   return (

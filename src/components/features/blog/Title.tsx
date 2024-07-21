@@ -28,7 +28,7 @@ const Title: React.FC = () => {
   const [articleReferences, setArticleReferences] = useState("");
   const [selectedKeyWord, setSelectedKeyWord] = useState<string[]>([]);
   const [collapseBusiness, setCollapseBusiness] = useState(false);
-  const [emptyState, setEmptyState] = useState(false);
+  const [emptyState, setEmptyState] = useState(true);
   const [slectedGeneratedContent, setSlectedGeneratedContent] = useState("");
   const onPressKeyword = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key == "Enter") {
@@ -41,6 +41,9 @@ const Title: React.FC = () => {
   };
   const removeKeyword = (word: string) => {
     setSelectedKeyWord(selectedKeyWord.filter((el) => el != word));
+  };
+  const generateTitle = () => {
+    setEmptyState(false);
   };
   const lengthOptions: LengthOption[] = [
     {
@@ -256,6 +259,7 @@ const Title: React.FC = () => {
                 ? "generate-titles-btn "
                 : "generate-titles-btn generate-titles-btn-disable"
             }
+            onClick={()=>generateTitle()}
           >
             Generate Titles 🪄
           </button>
