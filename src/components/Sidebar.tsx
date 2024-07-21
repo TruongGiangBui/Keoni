@@ -9,6 +9,7 @@ import menu4 from "../assets/images/menu4.png";
 import menu5 from "../assets/images/menu5.png";
 import menu6 from "../assets/images/menu6.png";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 interface MenuItem {
   url: string;
   icon: typeof menu1;
@@ -31,6 +32,9 @@ const Sidebar: React.FC = () => {
   // }, [window.location.pathname])
   return (
     <div className="sidebar">
+      <div className="collapse-menu">
+        <IoIosArrowBack></IoIosArrowBack>
+      </div>
       <img src={logo} alt="Keoni.ai Logo" className="logo" />
       <div className="sidebar-menu-list">
         {menuItems.map((item: MenuItem) => {

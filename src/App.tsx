@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -32,6 +37,7 @@ const App: React.FC = () => {
           <Col xs={9} className="content-column">
             <Navbar></Navbar>
             <Routes>
+              <Route path="/" element={<Navigate to="/create-content" />} />
               <Route path="/create-content" element={<CreateContent />} />
               <Route path="/home" element={<Home />} />
               <Route path="/get-inspired" element={<GetInspired />} />
