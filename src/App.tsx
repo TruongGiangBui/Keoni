@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -18,6 +18,7 @@ import "./assets/App.css";
 
 const App: React.FC = () => {
   const resizeObserverLoopErr = function () {};
+  const [collapse, setCollapse] = useState(false);
   window.addEventListener("error", (e) => {
     console.log("e.message", e.message);
     if (
@@ -31,8 +32,8 @@ const App: React.FC = () => {
     <Router>
       <Container fluid>
         <Row>
-          <Col xs={3} className="sidebar-column">
-            <Sidebar />
+          <Col xs={3} className={collapse?"sidebar-column sidebar-collapsed":"sidebar-column "}>
+            <Sidebar collapseMenu={(c)=>{setCollapse(c)}}/>
           </Col>
           <Col xs={9} className="content-column">
             <Navbar></Navbar>

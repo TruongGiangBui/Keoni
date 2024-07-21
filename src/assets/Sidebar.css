@@ -4,10 +4,17 @@
   height: 100vh;
   position: relative;
 }
+.sidebar-collapsed {
+  width: 8%;
+}
+.sidebar-collapsed .menu-name {
+  display: none;
+}
 
 .logo {
-  width: 200px;
+  height: 70px;
   margin-bottom: 20px;
+  background-size: cover;
 }
 .collapse-menu{
   position: absolute;

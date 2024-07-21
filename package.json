@@ -35,7 +35,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://truonggiangbui.github.io/keoni/",
+  "homepage": "https://truonggiangbui.github.io/Keoni/",
   "eslintConfig": {
     "extends": [
       "react-app",
