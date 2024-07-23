@@ -1,18 +1,20 @@
+# Stage 1: Build the React app
+FROM node:16 AS build
 
-FROM node:16-alpine
+RUN mkdir /app
 WORKDIR /app
-COPY package.json ./
-# Install dependencies
-RUN npm install
 
-COPY . .
-# Build the application
-RUN npm run build
-# Use an nginx container to serve the built files
+COPY ["package.json", "tsconfig.json", "/app/"]
+
+COPY ./ /app/
+RUN cd /app && npm install
+
+RUN npm -s run build
+
+# Stage 2, based on Nginx
 FROM nginx:alpine
-# Copy the build files to the nginx html directory
-COPY --from=0 /app/build /usr/share/nginx/html
-# Expose the port the app runs on
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
-# Start nginx server
+
 CMD ["nginx", "-g", "daemon off;"]
